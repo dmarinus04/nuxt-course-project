@@ -16,5 +16,5 @@
 <script setup>
   const route = useRoute();
 
-  const { data:post } = await useFetch(`http://localhost:8000/api/posts/${route.params.id}`)
+  const post = await useNuxtApp().$useFetch(`/api/posts/${route.params.id}`)
 </script>

@@ -4,8 +4,6 @@ import {defineNuxtPlugin, useRuntimeConfig, useAsyncData} from "#app";
 // Keep in mind if you are going to use dynamic query params, include them in the endpoint key.
 export default defineNuxtPlugin((nuxtApp) => {
     nuxtApp.provide('useFetch', (endpointUrl: string) => {
-        return useAsyncData(() => {
-            return $fetch(`${useRuntimeConfig().public.apiBaseUrl}${endpointUrl}`)
-        });
+        return $fetch(`${useRuntimeConfig().public.apiBaseUrl}${endpointUrl}`)
     })
 })
