@@ -5,5 +5,5 @@
 </template>
 
 <script setup>
-  const posts = await useNuxtApp().$useFetch('/api/posts');
+  const { data: posts, pending, error} = await useNuxtApp().$useFetch('/api/posts');
 </script>
