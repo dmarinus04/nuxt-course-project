@@ -6,7 +6,7 @@
     <div class="post-meta text-gray-700 flex items-center space-x-2">
       <div>{{ post.created_at }}</div>
       <div>&middot;</div>
-      <div>{{ post.user.name }}</div>
+      <div>{{ post?.user?.name }}</div>
     </div>
     <div class="post-content mt-3">
       {{ post.body }}
@@ -16,5 +16,5 @@
 <script setup>
   const route = useRoute();
 
-  const post = await useNuxtApp().$useFetch(`/api/posts/${route.params.id}`)
+  const { data:post } = await useFetch(`/api/posts/${route.params.id}`)
 </script>

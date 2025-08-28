@@ -4,6 +4,6 @@
   </div>
 </template>
 
-<script setup>
-  const posts = await useNuxtApp().$useFetch('/api/posts');
+<script setup lang="ts">
+  const { data:posts } = await useFetch('/api/posts');
 </script>

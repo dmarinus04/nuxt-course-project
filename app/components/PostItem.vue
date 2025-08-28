@@ -7,7 +7,7 @@
       <div class="post-meta text-gray-700 flex items-center space-x-2">
         <div>{{ post.created_at }}</div>
         <div>&middot;</div>
-        <div>{{ post.user.name }}</div>
+        <div>{{ post?.user?.name }}</div>
       </div>
       <div class="post-preview leading-relaxed mt-4">
         {{ post.body }}
@@ -18,8 +18,8 @@
     </div>
   </div>
 </template>
-<script setup>
-  const props = defineProps({
-    post: Object,
-  })
+<script setup lang="ts">
+  import type Post from "~/types/post";
+
+  defineProps<{ post: Post }>()
 </script>
