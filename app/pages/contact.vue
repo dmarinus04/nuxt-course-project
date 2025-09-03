@@ -1,5 +1,6 @@
 <template>
   <div class="container mx-auto md:w-1/2 w-4/5 py-8">
+    <Title>Contact | {{ title }}</Title>
     Contact - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vehicula maximus lacus in imperdiet. Proin dignissim
     massa in ipsum aliquet vehicula. Proin dapibus libero non sagittis mattis. Vivamus lorem libero, congue id semper
     et, pharetra quis ex. Sed sit amet libero in mi bibendum gravida eget vel nisi. Ut semper, lectus a consectetur
@@ -8,3 +9,6 @@
     sed feugiat nisl accumsan consequat. Donec aliquet in leo dignissim dignissim.
   </div>
 </template>
+<script setup lang="ts">
+  const title = useState('title')
+</script>

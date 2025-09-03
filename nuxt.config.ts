@@ -13,23 +13,4 @@ export default defineNuxtConfig({
   routeRules: {
     '/api/*': { prerender: true },
   },
-  vite: {
-    build: {
-      rollupOptions: {
-        external: [
-          'cloudflare:workers',
-          '#workerd/node:process',
-          'node:events',
-          'node:tty',
-          'unenv'
-        ]
-      }
-    }
-  },
-  nitro: {
-    preset: 'node-server',
-    externals: {
-      inline: ['unenv']
-    }
-  }
 })

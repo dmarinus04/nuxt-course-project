@@ -10,7 +10,5 @@
   </div>
 </template>
 <script setup lang="ts">
-  import {title} from "nitropack/presets/_unenv/workerd/process";
-
   const title = useState('title')
 </script>
